@@ -4,7 +4,8 @@
   "description": "this is the basic auth application which can be implemented in any app, Twillio is being used as a SMS api",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node app.js"
   },
   "author": "Ahmad Mustafeen @ GEEK_OF_KOLACHI",
   "license": "ISC",
