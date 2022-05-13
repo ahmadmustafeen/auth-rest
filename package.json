@@ -1,0 +1,16 @@
+{
+  "name": "auth-back-rest",
+  "version": "0.0.1",
+  "description": "this is the basic auth application which can be implemented in any app, Twillio is being used as a SMS api",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ahmad Mustafeen @ GEEK_OF_KOLACHI",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.3"
+  }
+}
