@@ -24,7 +24,7 @@ app.post("/", async (req, res) => {
       .send(ApiResponse({ email }, USER_DOESNT_EXIST_MESSAGE, false));
   if (await bcryptjs.compare(password, userExists.password))
     return res.status(200).send(ApiResponse(userExists,LOGIN_SUCCESS_MESSAGE));
-  return res.status(400).send(ApiResponse({ email }, INVALID_CREDENTIALS, false));
+  return res.status(200).send(ApiResponse({ email }, INVALID_CREDENTIALS, false));
 });
 
 module.exports = app;
