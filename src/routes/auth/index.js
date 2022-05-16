@@ -8,5 +8,6 @@ app.get("/", (req, res) => {
 })
 app.use("/login", require("./login"));
 app.use("/register", require("./register"));
+app.use("/forgetpassword", require("./forgetpassword"));
 
 module.exports = app;
