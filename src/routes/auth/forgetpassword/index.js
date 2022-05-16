@@ -29,7 +29,7 @@ app.post("/",async (req, res) => {
         return res.status(200).send(ApiResponse(OTP, "OTP sent successfully", true));
     }
     else{
-        return res.status(400).send(ApiResponse(OTP, "OTP not sent", false));
+        return res.status(200).send(ApiResponse(OTP, "OTP not sent", false));
     }
 });
 
