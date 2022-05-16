@@ -8,7 +8,7 @@ const userSchema = require("../../../models/UserSchema");
 const app = express();
 
 
-app.get("/",async (req, res) => {
+app.post("/",async (req, res) => {
     const requiredFields = validate(req.body,FORGET_PASSWORD_REQUIRED_FIELDS);
     if(requiredFields){
     return res.status(400).send(ApiResponse(null, `Missing required fields: ${requiredFields}`, false));
