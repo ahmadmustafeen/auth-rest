@@ -22,7 +22,7 @@ app.post("/", async (req, res) => {
 
   const userAlreadyExists = await userSchema.findOne({ email: req.body.email });
   if (userAlreadyExists)
-   return res.status(400).send(ApiResponse(USER_ALREADY_EXISTS_MESSAGE));
+   return res.status(200).send(ApiResponse({email:req.body.email},USER_ALREADY_EXISTS_MESSAGE,false));
 
   const { password } = req.body;
   const encryptedPassword = await bcryptjs.hash(password, 10);
