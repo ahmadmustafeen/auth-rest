@@ -16,7 +16,7 @@ app.post("/",async (req, res) => {
     const {email} = req.body;
     const userExists = await userSchema.findOne({email});
     if(!userExists){
-    return res.status(400).send(ApiResponse(null, USER_DOESNT_EXIST_MESSAGE, false));
+    return res.status(200).send(ApiResponse(null, USER_DOESNT_EXIST_MESSAGE, false));
     }
     const OTP = Math.floor(Math.random() * 10000);
     const content = `Your OTP is ${OTP}`;
