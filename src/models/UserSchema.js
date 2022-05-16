@@ -18,9 +18,17 @@ const UserSchema = new Schema({
         type: String,
         required: true,
     },
-    phone: {
+    phoneNumber: {
         type: String,
         required: true,
+    },
+    verified: {
+        type: Boolean,
+        default: false,
+    },
+    token: {
+        type: String,
+        required: false,
     },
 })
 
