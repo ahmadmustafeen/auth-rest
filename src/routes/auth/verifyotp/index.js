@@ -18,7 +18,7 @@ app.post("/", (req, res) => {
             userSchema.findOneAndUpdate({email: req.body.email}, {$set: {verified: true}}, async (err, user) => {
                 if(user){
                     await otpSchema.findOneAndDelete({email: req.body.email, otp: req.body.otp});
-                    return res.status(200).send(ApiResponse({},USER_VERIFIED_SUCCESSFULLY,true));
+                    return res.status(200).send(ApiResponse({success:true},USER_VERIFIED_SUCCESSFULLY,true));
                 }
                 return res.status(200).send(ApiResponse({},USER_DOESNT_EXIST_MESSAGE,false));
             })
