@@ -11,7 +11,7 @@ const app = express();
 app.post("/", (req, res) => {
     const validation =  validate(req.body, VERIFY_OTP_FIELDS)
     if(validation){
-    return res.status(400).send(ApiResponse({},`Some fields are missing: ${validation}`,false));
+    return res.status(200).send(ApiResponse({},`Some fields are missing: ${validation}`,false));
     }
     otpSchema.findOne({otp: req.body.otp, email: req.body.email}, (err, otp) => {
         if(otp){
@@ -20,11 +20,11 @@ app.post("/", (req, res) => {
                     await otpSchema.findOneAndDelete({email: req.body.email, otp: req.body.otp});
                     return res.status(200).send(ApiResponse({},USER_VERIFIED_SUCCESSFULLY,true));
                 }
-                return res.status(400).send(ApiResponse({},USER_DOESNT_EXIST_MESSAGE,false));
+                return res.status(200).send(ApiResponse({},USER_DOESNT_EXIST_MESSAGE,false));
             })
         }
         else{
-            return res.status(400).send(ApiResponse({},INVALID_OTP,false));
+            return res.status(200).send(ApiResponse({},INVALID_OTP,false));
         }
     })
 });
