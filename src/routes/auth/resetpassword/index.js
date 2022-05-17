@@ -14,7 +14,7 @@ app.post('/', async (req, res) => {
     }
     const encryptedPassword = await bcryptjs.hash(req.body.password, 10);
     userSchema.findOneAndUpdate({email:req.body.email}, {$set: {password: encryptedPassword}}, (err, user) => {
-    res.send(ApiResponse({},PASSWORD_UPDATED_MESSAGE,true));
+    res.status(200).send(ApiResponse({success:true},PASSWORD_UPDATED_MESSAGE,true));
 })
 })
 module.exports = app;
