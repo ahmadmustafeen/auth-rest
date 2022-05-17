@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "13e3211d-1a84-4f67-b104-d70e22c0109c",
+		"name": "REST_AP_AUTH",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "darknessth12@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "asdasdasd",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/user/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REGISTER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "darknessth12@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "asdasdasd",
+									"type": "default"
+								},
+								{
+									"key": "firstName",
+									"value": "ahmads",
+									"type": "default"
+								},
+								{
+									"key": "lastName",
+									"value": "mustafeen",
+									"type": "default"
+								},
+								{
+									"key": "phoneNumber",
+									"value": "93226309612",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://radiant-plateau-32921.herokuapp.com/user/auth/register",
+							"protocol": "https",
+							"host": [
+								"radiant-plateau-32921",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"user",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FORGET_PASSWORD",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "engr.ahmadmustafeen@gmail.com",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/user/auth/forgetpassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"auth",
+								"forgetpassword"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "engr.ahmadmustafeen@gmail.com",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RESET_PASSWORD",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "engr.ahmadmustafeen@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "asdasdasdxzzc",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/user/auth/resetpassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"auth",
+								"resetpassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VERIFY_OTP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "otp",
+									"value": "4260",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "engr.ahmadmustafeen@gmail.com",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/user/auth/verifyotp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"auth",
+								"verifyotp"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
